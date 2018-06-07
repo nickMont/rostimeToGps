@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="output" default="screen"/>
+
+  <node pkg="rostime_to_gps" type="timer_node" name="timeOffset"
+    output="$(arg output)" ns="luna">
+  </node>
+
+</launch>

@@ -19,6 +19,7 @@ void timerNode::singleBaselineRTKCallback(const gbx_ros_bridge_msgs::SingleBasel
     rostime_to_gps::offsetMsg tmsg;
     tmsg.tSolution = msg->tSolution;
     tmsg.header.stamp = ros::Time::now();
+    tmsg.dtRX = msg->deltRSec;
     timerPub_.publish(tmsg);
 }
 
